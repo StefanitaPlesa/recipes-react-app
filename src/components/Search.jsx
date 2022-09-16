@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { useState } from "react"
-import { GiBurn } from "react-icons/gi"
-import {useNavigate} from "react-router-dom"
+import { FiSearch } from "react-icons/fi"
+import { useNavigate } from "react-router-dom"
 
 function Search() {
     const [input, setInput] = useState("");
@@ -9,13 +9,13 @@ function Search() {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        navigate("/searched/"+input)
+        navigate("/searched/" + input)
     }
 
     return (
         <FormStyle onSubmit={submitHandler}>
             <div>
-                <GiBurn></GiBurn>
+                <FiSearch></FiSearch>
                 <input onChange={(e) => setInput(e.target.value)} type="text" value={input} />
             </div>
         </FormStyle>
@@ -24,9 +24,12 @@ function Search() {
 
 const FormStyle = styled.form`
     margin: 0rem 20rem;
+    min-width: 5rem;
+    
     div{
         width: 100%
         position: relative;
+        
     }
     input {
         border: none;
@@ -39,9 +42,10 @@ const FormStyle = styled.form`
        
     }
     svg{
+        
         top: 10%; 
         left: 0%;
-        transform: translate(100%, -50%);
+        transform: translate(50%, 160%);
         color: white;
     }
 `;

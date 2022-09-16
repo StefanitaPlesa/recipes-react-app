@@ -43,6 +43,8 @@ const getSearched = async (name) => {
     }
 }
 
+ 
+
 
 
 export { getPopular, getVeggie, getCuisine, getSearched }
